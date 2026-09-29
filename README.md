@@ -2,7 +2,7 @@
 
 ## 📊 Suite Completa de Gestión Financiera Personal
 
-Este repositorio contiene algoritmos reales personalizados para **Juan Davila Camarillo** diseñados para gestionar y analizar finanzas personales.
+Suite de algoritmos reales personalizados para **Juan Davila Camarillo** (RFC: **DACJ871001KTA**).
 
 ### 📁 Contenido
 
@@ -21,18 +21,24 @@ Este repositorio contiene algoritmos reales personalizados para **Juan Davila Ca
 ### 🚀 Características de los Algoritmos Personalizados
 
 #### Gestor de Finanzas
+- Propietario: Juan Davila Camarillo
+- RFC: DACJ871001KTA
 - Registro de ingresos y gastos
 - Cálculo de balance neto
 - Generación de resúmenes financieros
 - Clasificación de ingresos y gastos
 
 #### Analizador de Finanzas
+- Propietario: Juan Davila Camarillo
+- RFC: DACJ871001KTA
 - Análisis estadístico de gastos (promedio, máximo, mínimo)
 - Agrupación por categoría
 - Cálculo de ratio de ahorro
 - Interpretación de resultados
 
 #### Planificador de Presupuesto
+- Propietario: Juan Davila Camarillo
+- RFC: DACJ871001KTA
 - Establecimiento de presupuestos por categoría
 - Seguimiento de gastos realizados
 - Alertas cuando se alcanza el 90% del presupuesto
@@ -46,6 +52,8 @@ Este repositorio contiene algoritmos reales personalizados para **Juan Davila Ca
 from gestor_finanzas_juan import GestorFinanzasJuan
 
 gestor = GestorFinanzasJuan()
+print(f"Propietario: {gestor.propietario}")
+print(f"RFC: {gestor.rfc}")
 gestor.agregar_ingreso("Salario", 15000)
 gestor.agregar_gasto("Vivienda", "Renta", 5000)
 print(gestor.calcular_balance())
@@ -56,6 +64,8 @@ print(gestor.calcular_balance())
 from planificador_presupuesto_juan import PlanificadorPresupuestoJuan
 
 planificador = PlanificadorPresupuestoJuan(presupuesto_mensual=18000)
+print(f"Propietario: {planificador.propietario}")
+print(f"RFC: {planificador.rfc}")
 planificador.establecer_presupuesto_categoria("Vivienda", 5000)
 planificador.registrar_gasto_categoria("Vivienda", 5000)
 print(planificador.obtener_estado_presupuesto())
@@ -64,7 +74,10 @@ print(planificador.obtener_estado_presupuesto())
 ### 📈 Ejemplo de Salida
 
 ```
-GESTOR FINANCIERO PERSONAL - Juan Davila Camarillo
+GESTOR FINANCIERO PERSONAL
+Propietario: Juan Davila Camarillo
+RFC: DACJ871001KTA
+
 Total Ingresos: $18,000.00
 Total Gastos: $8,500.00
 Balance Neto: $9,500.00
@@ -74,13 +87,15 @@ Estado: Positivo ✓
 ### ⚠️ Notas Importantes
 
 - Los algoritmos de seguridad son **educativos** y no reemplazan sistemas bancarios certificados
-- Los algoritmos de gestión financiera son **personalizados y reales** para Juan Davila Camarillo
-- No introduzas datos sensibles reales en el repositorio público
+- Los algoritmos de gestión financiera son **personalizados y reales** para Juan Davila Camarillo (RFC: DACJ871001KTA)
+- No introduzas más datos sensibles en el repositorio público
 - Estos son ejemplos para aprendizaje y gestión personal
 
-### 📝 Autor
+### 📝 Información del Propietario
 
-**Juan Davila Camarillo**
+**Nombre:** Juan Davila Camarillo  
+**RFC:** DACJ871001KTA  
+**Usuario GitHub:** davilacamarillojuanj-lgtm  
 
 ### 📅 Fecha de Creación
 

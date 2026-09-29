@@ -1,6 +1,7 @@
 """
 Algoritmo de Gestión Financiera Personal
-Para: Juan Davila Camarillo
+Propietario: Juan Davila Camarillo
+RFC: DACJ871001KTA
 Autor: Juan Davila Camarillo
 Fecha: 2026-09-29
 
@@ -30,12 +31,13 @@ class Gasto:
 
 
 class GestorFinanzasJuan:
-    """Gestor financiero personal para Juan Davila Camarillo."""
+    """Gestor financiero personal para Juan Davila Camarillo (RFC: DACJ871001KTA)."""
     
     def __init__(self):
         self.ingresos: List[Ingreso] = []
         self.gastos: List[Gasto] = []
         self.propietario = "Juan Davila Camarillo"
+        self.rfc = "DACJ871001KTA"
         
     def agregar_ingreso(self, concepto: str, monto: float) -> Dict:
         """Registra un nuevo ingreso."""
@@ -49,7 +51,8 @@ class GestorFinanzasJuan:
             "estado": "ingreso registrado",
             "concepto": concepto,
             "monto": monto,
-            "propietario": self.propietario
+            "propietario": self.propietario,
+            "rfc": self.rfc
         }
     
     def agregar_gasto(self, categoria: str, descripcion: str, monto: float) -> Dict:
@@ -66,7 +69,8 @@ class GestorFinanzasJuan:
             "categoria": categoria,
             "descripcion": descripcion,
             "monto": monto,
-            "propietario": self.propietario
+            "propietario": self.propietario,
+            "rfc": self.rfc
         }
     
     def calcular_balance(self) -> Dict:
@@ -77,6 +81,7 @@ class GestorFinanzasJuan:
         
         return {
             "propietario": self.propietario,
+            "rfc": self.rfc,
             "total_ingresos": total_ingresos,
             "total_gastos": total_gastos,
             "balance_neto": balance,
@@ -95,6 +100,7 @@ class GestorFinanzasJuan:
         
         return {
             "propietario": self.propietario,
+            "rfc": self.rfc,
             "fecha_reporte": datetime.now().isoformat(),
             "total_ingresos": balance["total_ingresos"],
             "total_gastos": balance["total_gastos"],
@@ -110,7 +116,9 @@ if __name__ == "__main__":
     gestor = GestorFinanzasJuan()
     
     print("=" * 60)
-    print(f"GESTOR FINANCIERO PERSONAL - {gestor.propietario}")
+    print(f"GESTOR FINANCIERO PERSONAL")
+    print(f"Propietario: {gestor.propietario}")
+    print(f"RFC: {gestor.rfc}")
     print("=" * 60)
     print()
     

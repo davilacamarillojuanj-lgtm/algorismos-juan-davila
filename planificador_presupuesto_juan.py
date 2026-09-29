@@ -1,6 +1,7 @@
 """
 Planificador de Presupuesto Mensual
-Para: Juan Davila Camarillo
+Propietario: Juan Davila Camarillo
+RFC: DACJ871001KTA
 Autor: Juan Davila Camarillo
 
 Herramienta para planificar y controlar presupuesto mensual.
@@ -11,10 +12,11 @@ from datetime import datetime
 
 
 class PlanificadorPresupuestoJuan:
-    """Planificador de presupuesto para Juan Davila Camarillo."""
+    """Planificador de presupuesto para Juan Davila Camarillo (RFC: DACJ871001KTA)."""
     
     def __init__(self, presupuesto_mensual: float):
         self.propietario = "Juan Davila Camarillo"
+        self.rfc = "DACJ871001KTA"
         self.presupuesto_mensual = presupuesto_mensual
         self.presupuesto_por_categoria = {}
         self.gastos_realizados = {}
@@ -35,6 +37,7 @@ class PlanificadorPresupuestoJuan:
         """Obtiene el estado actual del presupuesto."""
         estado = {
             "propietario": self.propietario,
+            "rfc": self.rfc,
             "fecha": datetime.now().strftime("%Y-%m-%d"),
             "presupuesto_mensual_total": self.presupuesto_mensual,
             "categorias": []
@@ -90,6 +93,12 @@ class PlanificadorPresupuestoJuan:
 if __name__ == "__main__":
     planificador = PlanificadorPresupuestoJuan(presupuesto_mensual=18000)
     
+    print("PLANIFICADOR DE PRESUPUESTO")
+    print(f"Propietario: {planificador.propietario}")
+    print(f"RFC: {planificador.rfc}")
+    print("=" * 60)
+    print()
+    
     # Establecer presupuestos por categoría
     planificador.establecer_presupuesto_categoria("Vivienda", 5000)
     planificador.establecer_presupuesto_categoria("Alimentación", 2000)
@@ -103,10 +112,6 @@ if __name__ == "__main__":
     planificador.registrar_gasto_categoria("Transporte", 800)
     planificador.registrar_gasto_categoria("Entretenimiento", 400)
     planificador.registrar_gasto_categoria("Ahorros", 3000)
-    
-    print("PLANIFICADOR DE PRESUPUESTO - JUAN DAVILA CAMARILLO")
-    print("=" * 60)
-    print()
     
     estado = planificador.obtener_estado_presupuesto()
     print(f"Presupuesto Total Mensual: ${estado['presupuesto_mensual_total']}")

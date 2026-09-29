@@ -1,6 +1,7 @@
 """
 Analizador de Ingresos y Gastos
-Para: Juan Davila Camarillo
+Propietario: Juan Davila Camarillo
+RFC: DACJ871001KTA
 Autor: Juan Davila Camarillo
 
 Herramienta para analizar patrones de gasto e ingreso.
@@ -11,10 +12,11 @@ from statistics import mean, stdev
 
 
 class AnalizadorFinanzasJuan:
-    """Analiza patrones financieros de Juan Davila Camarillo."""
+    """Analiza patrones financieros de Juan Davila Camarillo (RFC: DACJ871001KTA)."""
     
-    def __init__(self, propietario: str = "Juan Davila Camarillo"):
+    def __init__(self, propietario: str = "Juan Davila Camarillo", rfc: str = "DACJ871001KTA"):
         self.propietario = propietario
+        self.rfc = rfc
         self.historial = []
     
     def registrar_movimiento(self, tipo: str, monto: float, categoria: str):
@@ -30,10 +32,15 @@ class AnalizadorFinanzasJuan:
         gastos = [m["monto"] for m in self.historial if m["tipo"] == "gasto"]
         
         if not gastos:
-            return {"propietario": self.propietario, "mensaje": "Sin gastos registrados"}
+            return {
+                "propietario": self.propietario,
+                "rfc": self.rfc,
+                "mensaje": "Sin gastos registrados"
+            }
         
         return {
             "propietario": self.propietario,
+            "rfc": self.rfc,
             "total_gastos": sum(gastos),
             "promedio_gasto": mean(gastos),
             "gasto_maximo": max(gastos),
@@ -53,6 +60,7 @@ class AnalizadorFinanzasJuan:
         
         return {
             "propietario": self.propietario,
+            "rfc": self.rfc,
             "gastos_por_categoria": categorias,
             "categoria_mayor_gasto": max(categorias, key=categorias.get) if categorias else None
         }
@@ -69,6 +77,7 @@ class AnalizadorFinanzasJuan:
         
         return {
             "propietario": self.propietario,
+            "rfc": self.rfc,
             "ingresos_totales": ingresos,
             "gastos_totales": gastos,
             "ratio_ahorro_porcentaje": round(ratio, 2),
@@ -87,7 +96,9 @@ if __name__ == "__main__":
     analizador.registrar_movimiento("gasto", 800, "Transporte")
     analizador.registrar_movimiento("gasto", 500, "Entretenimiento")
     
-    print("ANÁLISIS DE FINANZAS - JUAN DAVILA CAMARILLO")
+    print("ANÁLISIS DE FINANZAS")
+    print(f"Propietario: {analizador.propietario}")
+    print(f"RFC: {analizador.rfc}")
     print("=" * 50)
     print()
     print("Análisis de gastos:")
